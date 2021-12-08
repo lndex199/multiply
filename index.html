@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Addition</title>
+    <link rel="icon" href="favicon.svg" />
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+</head>
+
+<body>
+    <div class="main-ui">
+
+        <div class="max">
+            <div class="max-one">
+                <label for="maxOne">Set max above 2</label>
+                <input type="number" id="maxOne" value="12">
+                <span>▼</span>
+            </div>
+            <button class="update-button">Update<br>Question</button>
+            <div class="max-two">
+                <label for="maxTwo">Set max above 2</label>
+                <input type="number" id="maxTwo" value="12">
+                <span>▼</span>
+            </div>
+        </div>
+
+        <p class="problem"></p>
+
+        <form class="our-form">
+            <label for="ourField">Your Answer</label>
+            <input type="text" class="our-field" id="ourField" autocomplete="off">
+            <button>Submit</button>
+        </form>
+
+        <p class="status">You need <span class="points-needed">10</span> more points, and
+            are allowed to make <span class="mistakes-allowed">2</span>
+            more mistakes.</p>
+
+        <div class="progress">
+            <div class="boxes">
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+            </div>
+            <div class="progress-inner"></div>
+        </div>
+    </div>
+
+    <div class="overlay">
+        <div class="overlay-inner">
+            <p class="end-message"></p>
+            <button class="reset-button">Start Over</button>
+            <button class="return-button">Return to New Question</button>
+        </div>
+    </div>
+
+    <footer>© 2022 Vegas Newn</footer>
+</body>
+
+</html>

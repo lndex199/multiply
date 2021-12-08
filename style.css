@@ -1,0 +1,208 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Tahoma, sans-serif;
+}
+
+.main-ui {
+  max-width: 50em;
+  margin: 0 auto 6em;
+  padding-top: 3em;
+}
+
+.max {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1em;
+}
+.max-one,
+.max-two {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.max label {
+  color: blue;
+  width: 100%;
+}
+.max input {
+  border: 2px double red;
+  outline: none;
+  font-size: 1.5em;
+  width: 6em;
+  text-align: center;
+  padding: 0.2em 0;
+  margin: 0.5em 0;
+}
+.max span {
+  font-size: 1.5em;
+}
+.update-button {
+  color: white;
+  font-size: 0.9em;
+  background: blue;
+  border: none;
+  border-radius: 0.5em;
+  padding: 0.25em 0.5em;
+  outline: none;
+}
+
+.problem {
+  text-align: center;
+  font-size: 5.5em;
+  letter-spacing: 0.11em;
+}
+
+.our-form {
+  display: flex;
+  justify-content: center;
+  margin: 4em auto;
+}
+form label {
+  align-self: center;
+  text-align: center;
+  width: 4.5em;
+  font-size: 1.1em;
+}
+.our-field {
+  border-radius: 0.5em 0 0 0.5em;
+  border-right: none;
+  text-align: center;
+  font-size: 1.5em;
+  color: red;
+  font-weight: bold;
+  outline: none;
+  width: 8em;
+}
+
+form button {
+  padding: 1em;
+  background: #000;
+  color: white;
+  border: none;
+  border-radius: 0 0.5em 0.5em 0;
+  font-size: 1.2em;
+  outline: none;
+}
+
+.status {
+  text-align: center;
+  font-size: 1.5em;
+}
+.points-needed {
+  color: blue;
+  font-weight: bold;
+}
+.mistakes-allowed {
+  color: red;
+  font-weight: bold;
+}
+
+.progress {
+  width: 95%;
+  margin: 4em auto 0;
+  border: 1px solid #c7c7c7;
+  border-right: none;
+  position: relative;
+}
+
+.boxes {
+  display: flex;
+}
+
+.box {
+  flex-grow: 1;
+  height: 2.5em;
+  border-right: 1px solid #aaa;
+}
+
+.progress-inner {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #7ecc00;
+  opacity: 0.57;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.4s ease-out;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.82);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.33s ease-out;
+  transform: scale(1.2);
+}
+.overlay-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4em;
+}
+.end-message {
+  color: white;
+  font-size: 2.5em;
+  text-align: center;
+}
+.reset-button {
+  color: white;
+  font-size: 2em;
+  background: blue;
+  border: none;
+  border-radius: 0.5em;
+  padding: 0.75em 1.5em;
+  outline: none;
+}
+.return-button {
+  color: white;
+  font-size: 1.5em;
+  background: blue;
+  border: none;
+  border-radius: 0.5em;
+  padding: 0.75em 1.5em;
+  outline: none;
+}
+
+body.overlay-is-open .overlay {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+}
+
+body.overlay-is-open .main-ui {
+  filter: blur(4px);
+}
+
+.animate-wrong {
+  animation: 0.45s showError;
+}
+
+@keyframes showError {
+  50% {
+    color: red;
+    transform: scale(1.2);
+  }
+  100% {
+    color: #333;
+    transform: scale(1);
+  }
+}
+
+footer {
+  text-align: center;
+}
